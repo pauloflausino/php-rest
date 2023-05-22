@@ -9,6 +9,8 @@
 
 # Banco de dados
     dump-phpapidb-202305221533.sql
+# Config/database.php
+    alterar as configurações para o seu host, database_name entre outros dados
 
 
 # php-rest
