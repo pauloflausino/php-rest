@@ -13,9 +13,6 @@
     $clubes = $items->getClubes();
     $itemCount = $clubes->rowCount();
 
-
-    echo json_encode($itemCount);
-
     if($itemCount > 0){
         
         $clubArr = array();
@@ -27,13 +24,10 @@
                 "clube" => $club_name,
                 "saldo_disponivel" => number_format($balance_available,2,",",".")
             );
-
             array_push($clubArr, $e);
         }
         echo json_encode($clubArr);
-    }
-
-    else{
+    }else{
         http_response_code(400);
         echo json_encode(
             array("message" => "No record found.")

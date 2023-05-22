@@ -13,13 +13,9 @@
     $resources = $items->getResources();
     $itemCount = $resources->rowCount();
 
-
-    echo json_encode($itemCount);
-
     if($itemCount > 0){
         
         $resouceArr = array();
-
 
         while ($row = $resources->fetch(PDO::FETCH_ASSOC)){
             extract($row);
@@ -32,9 +28,7 @@
             array_push($resouceArr, $e);
         }
         echo json_encode($resouceArr);
-    }
-
-    else{
+    } else{
         http_response_code(400);
         echo json_encode(
             array("message" => "No record found.")
