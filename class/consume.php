@@ -76,9 +76,9 @@ class consume
                 return false;
             }
         }else {
-            http_response_code(404);
+            http_response_code(400);
             echo "O saldo disponivel do clube e insuficiente.";
-            
+
             return false;
         }
     }
