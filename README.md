@@ -1,3 +1,15 @@
+# Clone o projeto
+  git clone https://github.com/pauloflausino/php-rest
+
+# Entre na pasta do projeto
+    cd c:\php-rest
+
+# Execute o server php 
+    php -S 127.0.0.1:8080
+
+
+
+
 # php-rest
 API REST, para uma aplicação de gerenciamento
 recursos financeiros de clubes.
