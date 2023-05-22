@@ -77,8 +77,8 @@ class consume
             }
         }else {
             http_response_code(404);
-            $error['message'] = "O saldo disponivel do clube e insuficiente.";
-            echo json_encode($error);
+            echo "O saldo disponivel do clube e insuficiente.";
+            
             return false;
         }
     }

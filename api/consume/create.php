@@ -13,9 +13,9 @@
 
     $item = new Consume($db);
 
-    $item->club_id = $_POST["club_id"];
-    $item->resource_id = $_POST["resource_id"];
-    $item->cost = $_POST["cost"];
+    $item->club_id = $_POST["clube_id"];
+    $item->resource_id = $_POST["recurso_id"];
+    $item->cost = $_POST["valor_consumo"];
 
     $item->createConsume();
 

@@ -25,7 +25,7 @@
             $e = array(
                 "id" => $id,
                 "clube" => $club_name,
-                "saldo_disponivel" => $balance_available
+                "saldo_disponivel" => number_format($balance_available,2,",",".")
             );
 
             array_push($clubArr, $e);

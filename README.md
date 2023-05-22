@@ -7,7 +7,8 @@
 # Execute o server php 
     php -S 127.0.0.1:8080
 
-
+# Banco de dados
+    dump-phpapidb-202305221533.sql
 
 
 # php-rest

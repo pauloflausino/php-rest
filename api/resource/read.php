@@ -27,7 +27,7 @@
             $e = array(
                 "id" => $id,
                 "resource_name" => $resource_name,
-                "balance_available" => $balance_available
+                "balance_available" => number_format($balance_available,2,",",".")
             );
 
             array_push($resouceArr["body"], $e);

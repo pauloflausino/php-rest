@@ -13,12 +13,14 @@
 
     $item = new Club($db);
 
-    $item->club_name = $_POST["club_name"];
-    $item->balance_available = $_POST["balance_available"];
+    $item->club_name = $_POST["clube"];
+    $item->balance_available = $_POST["saldo_disponivel"];
 
     if($item->createClub()){
-        echo 'Club created successfully.';
+        http_response_code(200);
+        echo 'OK';
     } else{
-        echo 'Club could not be created.';
+        http_response_code(404);
+        echo 'Not OK.';
     }
 ?>
