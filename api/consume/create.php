@@ -13,6 +13,22 @@
 
     $item = new Consume($db);
 
+    if(empty($_POST["recurso_id"])){
+        http_response_code(400);
+        echo 'Necessario informar recurso_id';
+        return false;
+    }
+    if(empty($_POST["clube_id"])){
+        http_response_code(400);
+        echo 'Necessario informar clube_id.';
+        return false;
+    }
+    if(empty($_POST["valor_consumo"])){
+        http_response_code(400);
+        echo 'Necessario informar valor do consumo.';
+        return false;
+    }
+
     $item->club_id = $_POST["clube_id"];
     $item->resource_id = $_POST["recurso_id"];
     $item->cost = $_POST["valor_consumo"];

@@ -13,6 +13,17 @@
 
     $item = new Club($db);
 
+    if(empty($_POST["clube"])){
+        http_response_code(400);
+        echo 'Necessario informar Clube';
+        return false;
+    }
+    if(empty($_POST["saldo_disponivel"])){
+        http_response_code(400);
+        echo 'Necessario informar saldo_disponivel.';
+        return false;
+    }
+
     $item->club_name = $_POST["clube"];
     $item->balance_available = $_POST["saldo_disponivel"];
 

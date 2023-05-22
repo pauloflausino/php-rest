@@ -13,8 +13,19 @@
 
     $item = new Resource($db);
 
-    $item->resource_name = $_POST["resource_name"];
-    $item->balance_available = $_POST["balance_available"];
+    if(empty($_POST["recurso"])){
+        http_response_code(400);
+        echo 'Necessario informar Recurso';
+        return false;
+    }
+    if(empty($_POST["saldo_disponivel"])){
+        http_response_code(400);
+        echo 'Necessario informar saldo_disponivel.';
+        return false;
+    }
+
+    $item->resource_name = $_POST["recurso"];
+    $item->balance_available = $_POST["saldo_disponivel"];
 
     if($item->createResource()){
         echo 'Resource created successfully.';

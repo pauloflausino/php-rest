@@ -19,18 +19,17 @@
     if($itemCount > 0){
         
         $resouceArr = array();
-        $resouceArr["body"] = array();
-        $resouceArr["itemCount"] = $itemCount;
+
 
         while ($row = $resources->fetch(PDO::FETCH_ASSOC)){
             extract($row);
             $e = array(
                 "id" => $id,
-                "resource_name" => $resource_name,
-                "balance_available" => number_format($balance_available,2,",",".")
+                "recurso" => $resource_name,
+                "saldo_disponivel" => number_format($balance_available,2,",",".")
             );
 
-            array_push($resouceArr["body"], $e);
+            array_push($resouceArr, $e);
         }
         echo json_encode($resouceArr);
     }
